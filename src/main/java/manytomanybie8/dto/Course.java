@@ -13,7 +13,7 @@ public class Course {
 	private int id;
 	private String name;
 	private double fees;
-	@ManyToMany
+	@ManyToMany(mappedBy = "courses")
 	private List<Student> students;
 	public int getId() {
 		return id;

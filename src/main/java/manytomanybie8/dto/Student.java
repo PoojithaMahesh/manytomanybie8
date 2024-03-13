@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
 @Entity
@@ -12,7 +13,7 @@ public class Student {
 	private int id;
 	private String name;
 	private String address;
-	
+	@JoinTable
 	@ManyToMany
 	private List<Course> courses;
 
